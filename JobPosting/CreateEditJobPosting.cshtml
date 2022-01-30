@@ -1,0 +1,67 @@
+﻿@model Workstatic.Models.JobPosting
+@{
+    ViewData["Title"] = "Erstellen oder Bearbeiten von Inseraten";
+}
+
+Hier kannst du eine neues Inserat anlegen
+
+<h5>Inserat bearbeiten</h5>
+
+<form asp-controller="JobPosting" asp-action="CreateEditJob" enctype="multipart/form-data">
+    <div class="row">
+        <div class="col">
+            <input asp-for="JobTitle" type="text" placeholder="Stellentitel eintragen" />
+        </div>
+        <div class="col">
+            <input asp-for="JobLocation" type="text" placeholder="Arbeitsort eintragen" />
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col">
+            <input asp-for="Description" type="text" placeholder="Stellenbeschreibung eingeben" /> 
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col">
+            <input asp-for="Salary" type="number" placeholder="Jahresgehalt eingeben" />
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col">
+            <input asp-for="StartDate" type="date" placeholder="Ab wann soll die Stelle besetzt werden?" />
+        </div>
+    </div>
+    
+    <br />
+
+    <div class="row">
+        <div class="col">
+            <input asp-for="CompanyName" type="text" placeholder="Firmennamen eingeben" />
+        </div>
+        <div class="col">
+            <input asp-for="ContactWebsite" type="text" placeholder="URL" />
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col">
+            <input asp-for="ContactPhone" type="text" placeholder="Telefonnummer" />
+        </div>
+        <div class="col">
+            <input asp-for="ContactWebsite" type="text" placeholder="Email zur Kontaktaufnahme" />
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col">
+            <label>Bild</label>
+            <input type="file" name="file" />
+        </div>
+    </div>
+
+
+    <button type="submit">Speichern</button>
+</form>
